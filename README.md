@@ -1,10 +1,9 @@
-* Tema 2
-* Metode Numerice
-* Vlad Costin Andrei
-* 311 CD
+# Metode Numerice - Interpolare Aplicata pe Imagini
 
-____________________
--- Proximal --
+Documentatia pentru proiect se gaseste in fisierul numit "Tema2-full.pdf".
+
+Proximal
+--------
 Pentru 2x2:
 Pentru o imagine 2x2, generam un vector cu toate punctele intermediare, din
 0.1 in 0.1, atat pentru coordonatele pe Ox cat si pentru Oy. Stim deja ca cele
@@ -43,9 +42,9 @@ Pentru RGB:
 Ca sa rezolvam orice task care implica imagini RGB, consideram o matrice tri-
 dimensionala. In aceasta retinem rezultatul functiei corespunzatoare unui 
 canal de culoare din imaginea initiala. Apoi, la final, concatenam cele 3 rezultate intr-o matrice finala.
-____________________
--- Bicubic --
 
+Bicubic
+-------
 Pentru derivate partiale:
 Pentru a calcula derivata lui f intr-un punct (x sau y) sau in ambele puncte,
 folosim formulele prezentate in pdf. Pentru a calcula matricele de derivare
@@ -76,9 +75,9 @@ Pentru RGB:
 Ca sa rezolvam orice task care implica imagini RGB, consideram o matrice tri-
 dimensionala. In aceasta retinem rezultatul functiei corespunzatoare unui 
 canal de culoare din imaginea initiala. Apoi, la final, concatenam cele 3 rezultate intr-o matrice finala.
-____________________
--- Lanczos --
 
+Lanczos
+-------
 Algoritmul Lanczos pt bloc nesimetric:
 Efectuam descompunerea QR a matricelor V si W primite ca parametrii, apoi
 iteram calculand spatiile vectoriale Vm si Wm. Pentru acest lucru ne folosim
@@ -87,4 +86,3 @@ m = 1. La fiecare pas i, efectuam descompunerea QR a celor 2 matrice Vi si Wi,
 apoi calculam SVD pentru matricele Wi+1' (transpus) si Vi+1, pe baza carora
 vom afla si _Vm_ si _Wm_ la pasul i + 2. Pe deasupra mai obtinem blocul T de
 dimensiune mp x np.
-____________________
